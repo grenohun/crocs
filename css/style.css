@@ -188,3 +188,168 @@ h4 > a {
 .slider-center {
     flex: 0 0 400px;
 }
+
+/*====video====*/
+
+/* 비디오 박스의 스타일 */
+.video-box {
+    max-width: 960px; 
+    max-height: 860px;
+}
+
+/* 비디오의 스타일 */
+.video-box video {
+    overflow: hidden;
+}
+
+/* styles.css */
+
+.video-container {
+    display: flex; 
+    align-items: center; 
+}
+
+/* 비디오 박스의 스타일 */
+.video-box {
+    flex: 1; 
+}
+
+/* 비디오의 스타일 */
+.video-box video {
+    width: 100%; 
+    height: auto; 
+}
+
+/* 비디오 사이드 이미지 영역의 스타일 */
+.video-sideimg {
+    flex: 0; 
+}
+
+/* 비디오 사이드 이미지 영역 내 이미지들의 스타일 */
+.video-sideimg ul {
+    list-style: none; 
+    padding: 50px;
+    display: flex; 
+    align-items: flex-start;
+}
+
+
+.video-sideimg li {
+    padding: 40px;
+}
+
+.video-sideimg img {
+    width: 320px; 
+    height: auto; 
+}
+
+
+/*===foooter===*/
+.info {
+    background-color: #fff;
+}
+
+.infomap {
+    display: flex;
+    border-bottom: 3px solid #4444;
+}
+
+.info-center{
+    width: 50%;
+    text-align: center;
+}
+
+.info-center p {
+    padding: 30px;
+    line-height: 30px;
+}
+
+.map-info {
+    width: 50%;
+    text-align: center;
+}
+
+.map-info li {
+    padding: 10px;
+}
+
+
+/*sale-btn*/
+
+.sale {
+    width: 100%;
+    text-align: center;
+}
+
+.salebtn {
+    text-align: center;
+    margin: 15px auto;
+    padding: 15px 80px 15px 80px;
+    color: #fff;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #4444;
+    cursor: pointer;
+}
+
+.infolist {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    border-bottom: 3px solid #4444;
+}
+
+.infolist > .list {
+    margin: 0 auto;
+} 
+
+.infolist .list li {
+    padding: 20px;
+}
+
+.infolist .list li:hover {
+    text-decoration: underline;
+}
+
+
+
+/*--lastinfo-sns-footlogo--*/
+.last-info-sns {
+    display: flex;
+}
+
+
+.last-info {
+    width: 80%;
+}
+
+.last-info p {
+    line-height: 80px;
+    padding-left: 30px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+/*sns*/
+.sns {
+    width: 20%;
+    padding-left: 100px;
+}
+.snslogo ul{ 
+    display: flex;
+}
+
+
+/*footerlogo*/
+
+
+.foot-logo {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footlogo {
+    text-align: center;
+    padding: 50px;
+}

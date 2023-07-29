@@ -40,6 +40,11 @@ h3{
     font-size: 30px;
 }
 
+h5 {
+    font-size: 20px;
+    padding: 35px;
+}
+
 p{
     line-height: 1.8;
 }
