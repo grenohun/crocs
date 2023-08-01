@@ -32,13 +32,18 @@ p > a {
 
 /*======header======*/
 header {
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+    background-color: #f6f1eb ;
     width: 100%;
-    height: 150px;
+    height: 120px;
     /*background-color: aqua;*/
 }
 
 .flex-container {
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: space-between; /* 수평 정렬 */
     align-items: center; /* 수직가운데정렬 */
@@ -47,13 +52,12 @@ header {
 
 /*---leftmenu----*/
 .leftmenu {
-    width: 15%;
+    width: 0% ;
     display: flex;
-    justify-content: space-between;
 }
 
 .mobile-btn {
-    padding-left: 30px;
+    padding-top :5 px;
     cursor: pointer;
 }
 
@@ -67,15 +71,8 @@ header {
     margin: 10px 0;
 }
 
-.leftmenu > p {
-    padding-left: 10px;
-}
-
 .search {
-    display: flex;
     position: relative;
-    width: 100px;
-    padding-left: 30px ;
 }
 
 input {
@@ -92,7 +89,7 @@ input {
     position : absolute;
     width: 17px;
     top: 10px;
-    left: 35px;
+    left: 150px;
     margin: 0;
 }
 
@@ -105,7 +102,7 @@ input {
 
 /*----right menu-----*/
 .rightmenu {
-    padding-right: 30px;
+    padding-right: 0px;
 }
 
 .rightmenu > ul {
@@ -135,13 +132,12 @@ input {
     }
     
     .leftmenu {
-        width: 15%;
+        width: 0% ;
         display: flex;
-        justify-content: space-between;
     }
     
     .mobile-btn {
-        padding-left: 30px;
+        padding: 20px;
         cursor: pointer;
     }
     
@@ -154,10 +150,7 @@ input {
     .mobile-btn > span:nth-child(2) {
         margin: 10px 0;
     }
-    
-    .leftmenu > p {
-        padding-left: 10px;
-    }
+
     
     .search {
         position: relative;
@@ -179,12 +172,8 @@ input {
         position : absolute;
         width: 17px;
         top: 10px;
-        left: 35px;
+        left: 150px;
         margin: 0;
-    }
-
-    .rightmenu {
-        padding-right: 30px;
     }
 
     .rightmenu > ul {
@@ -197,7 +186,13 @@ input {
     .rightmenu > ul a:hover {
         text-decoration: underline;
     }
+
+    h1 {
+        text-align: center;
+        padding-left: 30px;
+    }
 }
+
 
 
 /*pc*/
@@ -217,13 +212,12 @@ input {
     
     
     .leftmenu {
-        width: 15%;
+        width: 0% ;
         display: flex;
-        justify-content: space-between;
     }
     
     .mobile-btn {
-        padding-left: 30px;
+        padding: 10px;
         cursor: pointer;
     }
     
@@ -237,14 +231,11 @@ input {
         margin: 10px 0;
     }
     
-    .leftmenu > p {
-        padding-left: 10px;
-    }
     
     .search {
         position: relative;
         width: 100px;
-        padding-left: 30px ;
+        
     }
     
     input {
@@ -261,10 +252,21 @@ input {
         position : absolute;
         width: 17px;
         top: 10px;
-        left: 35px;
+        left: 150px;
         margin: 0;
     }
+
+.logo > h1 {
+        text-align: center;
+        padding-left: 150px;
+    }
 }
+
+    .rightmenu {
+        padding-right: 0px;
+    }
+
+    
 
 
 /*=====main=====*/
@@ -306,8 +308,8 @@ width: 100%;
 
 .collection-imgbox1 > li {
     padding: 10px;
-}
 
+}
 
 .collection-imgbox2 {
     display: flex;
@@ -317,6 +319,20 @@ width: 100%;
     padding: 10px;
 }
 
+.collection-imgbox1 li a,
+    .collection-imgbox2 li a {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 10px; 
+        transition: opacity 0.3s ease, border-radius 0.3s ease; 
+    }
+
+    
+    .collection-imgbox1 li a:hover,
+    .collection-imgbox2 li a:hover {
+        opacity: 0.8; 
+        border-radius: 50%; /
+    }
 
 
 /*---slider---*/
@@ -334,7 +350,7 @@ width: 100%;
     justify-content: space-between; 
     width: 100%; 
     overflow: hidden;
-    padding: 100px;
+    padding: 0;
 }
 
 
@@ -346,6 +362,34 @@ width: 100%;
 
 .slider-track {
     flex: 0 0 400px;
+}
+
+.slider-track img:first-child {
+    height: 500px;
+    width: 19%;
+    margin-top: 180px;
+    opacity: 70%;
+}
+
+.slider-track img:nth-child(2){
+    height: 620px;
+    width: 19%;
+    margin-top: 60px;
+    opacity: 70%;
+}
+
+.slider-track img:nth-child(4){
+    height: 620px;
+    width: 19%;
+    margin-top: 60px;
+    opacity: 70%;
+}
+
+.slider-track img:last-child {
+    height: 500px;
+    width: 19%;
+    margin-top: 180px;
+    opacity: 70%;
 }
 
 /*====video====*/
@@ -382,7 +426,7 @@ width: 100%;
 }
 
 .video-sideimg {
-    padding-right: 0;
+    width: 50%;
 }
 
 .video-sideimg ul {
@@ -390,11 +434,14 @@ width: 100%;
     padding: 50px;
     display: flex; 
     align-items: flex-start;
+    padding-right: 0 ;
 }
 
 
 .video-sideimg li {
-    padding: 40px;
+    padding: 50px;
+    padding-bottom: 50px;
+    padding-right: 10;
 }
 
 .video-sideimg img {
@@ -403,13 +450,22 @@ width: 100%;
 }
 
 .sideimg1 {
-    padding-right: 0;
+    padding-bottom: 50px;
+    padding-right: 10;
 }
 
 .sideimg2 {
-    padding-right: 0;
+    padding-bottom: 50px;
+    padding-right: 10;
 }
 
+.video-sideimg ul li a img {
+    transition: opacity 0.3s ease; 
+}
+
+.video-sideimg ul li a img:hover {
+    opacity: 0.7; 
+}
 
 /*===foooter===*/
 .info {
@@ -429,11 +485,13 @@ width: 100%;
 .info-center > time {
     padding: 30px;
     line-height: 30px;
+    padding-bottom: 50px ;
 }
 
 .map-info {
     width: 50%;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .map-info li {
@@ -460,11 +518,30 @@ width: 100%;
     cursor: pointer;
 }
 
+.salebtn {
+    background-color:  #4444; /* 버튼의 배경색 */
+    color: white; /* 버튼의 글자색 */
+    border: none; /* 버튼 테두리 제거 */
+    padding: 15px 80px 15px 80px; /* 버튼 내부 여백 */
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px; /* 버튼 글자 크기 */
+    cursor: pointer; /* 커서 모양을 손가락으로 변경 */
+    transition: background-color 0.3s ease; 
+}
+
+
+.salebtn:hover {
+    color: #fff;
+    background-color: black; 
+}
+
 .infolist {
     display: flex;
     width: 100%;
     text-align: left;
     border-bottom: 3px solid #4444;
+    padding-bottom: 50px;
 }
 
 .infolist > .list {
